@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Criar um ponto de coleta</title>
+</head>
+
+<body>
+  <div id="page-create-point">
+    <header class="header">
+      <img src="assets/icones/logo.svg" alt="Logo Ecoleta">
+      <a href="index.html"><span></span> Voltar para home</a>
+    </header>
+
+    <form action="">
+      <h1>Cadastro de Ponto de Coleta.</h1>
+
+      <fieldset>
+        <legend>
+          <h2>Dados de Entidade.</h2>
+        </legend>
+        <div class="field">
+          <label for="name">Nome da Entidade</label>
+          <input type="text" name="name">
+        </div>
+        <div class="field-group">
+
+          <div class="field">
+            <label for="address">Endereço</label>
+            <input type="text" name="adresss">
+          </div>
+
+          <div class="field">
+            <label for="adresss2">Número/Complemento</label>
+            <input type="text" name="adresss2">
+          </div>
+        </div>
+        <div class="field-group">
+          <div class="field">
+            <label for="state">Estado</label>
+            <select name="uf" id="">
+              <option value="">Selecione o Estado</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="city">City</label>
+            <select name="city" disabled id="">
+              <option value="">Selecione a Cidade</option>
+            </select>
+          </div>
+
+
+        </div>
+      </fieldset>
+      <!--      <fieldset>
+        <legend>Itens de Coleta</legend>
+      </fieldset> -->
+      <button type="submit">Cadastrar Ponto de Coleta</button>
+    </form>
+  </div>
+</body>
+
+</html>

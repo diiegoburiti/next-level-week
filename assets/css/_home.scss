@@ -59,10 +59,10 @@
       margin-top: 40px;
       font-weight: bold;
       color: #fff;
-      transform: 4ms;
+      transition: background-color 0.4s;
 
       &:hover {
-        background-color: #2ffb86;
+        background-color: $title-color;
       }
 
       span {
