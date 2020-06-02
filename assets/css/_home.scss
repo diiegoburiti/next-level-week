@@ -1,0 +1,91 @@
+#page-home {
+  height: 100vh;
+  background: url(../icones/home-background.svg) no-repeat;
+  background-position: 35vw bottom;
+
+  .container {
+    width: 90vw;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px;
+
+    a {
+      display: flex;
+      text-decoration: none;
+      color: $title-color;
+      font-weight: bold;
+      span {
+        background-image: url(../icones/log-in.svg);
+        width: 20px;
+        height: 20px;
+        margin-right: 16px;
+      }
+    }
+  }
+  main {
+    max-width: 560px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      font-family: $ubuntu-font;
+      font-size: 54px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 36px;
+      margin-top: 28px;
+    }
+    a {
+      width: 100%;
+      max-width: 360px;
+      height: 72px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      color: $title-color;
+      background-color: $primary-color;
+      margin-top: 40px;
+      font-weight: bold;
+      color: #fff;
+      transform: 4ms;
+
+      &:hover {
+        background-color: #2ffb86;
+      }
+
+      span {
+        width: 72px;
+        height: 72px;
+        background-color: rgba(0, 0, 0, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+
+        &:after {
+          content: "";
+          background-image: url(../icones/search.svg);
+          width: 20px;
+          height: 20px;
+        }
+      }
+      strong {
+        flex: 1;
+        text-align: center;
+      }
+    }
+  }
+}
