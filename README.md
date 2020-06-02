@@ -1,2 +1,2 @@
 # Next Week Level
-## It's a project of [Rocketseat](https://rocketseat.com.br/) to practive code, challenge and network.
+## It's a project of [Rocketseat](https://rocketseat.com.br/) to practice code, challenges and networks.
