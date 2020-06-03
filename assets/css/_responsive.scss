@@ -5,8 +5,9 @@
     .container {
       align-items: center;
       justify-content: center;
+      color: $title-color;
     }
-    .header a{
+    .header a {
       position: absolute;
       bottom: 48px;
       left: 50%;
@@ -16,6 +17,16 @@
       align-items: center;
     }
   }
+
+/*   #page-search-results {
+    .main {
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 24px;
+      }
+    }
+  } */
 }
 
 @media (min-width: 1700px) {
@@ -23,6 +34,18 @@
     background-position-x: 40vw;
   }
 }
+/* 
+@media (max-width: 600px) {
+  #page-search-results {
+    .main {
+      .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 24px;
+      }
+    }
+  }
+} */
 
 @media (max-height: 760px) {
   #page-home {

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Ubuntu:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +34,8 @@ h6 {
   font-family: $ubuntu-font;
   color: $title-color;
 }
-@import "modal";
 @import "home";
+@import "modal";
 @import "create-point";
+@import "search-results";
 @import "responsive";
