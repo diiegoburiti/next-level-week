@@ -6,8 +6,8 @@ ufSelect.addEventListener('change', getCities);
 
 async function populateUfs() {
 
-  let dataResponse = await fetch(urlStates)
-  let states = await dataResponse.json()
+  const dataResponse = await fetch(urlStates)
+  const states = await dataResponse.json()
   for (state of states) {
     ufSelect.innerHTML += `<option value="${state.id}">${state.nome}</option>`;
   }
@@ -24,11 +24,14 @@ async function getCities(event) {
     stateInput.value = event.target.options[indexOfSelectedState].text
     const ufValue = event.target.value;
     const urlCities = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/distritos`;
+    
+    citySelect.disabled = true;
+    citySelect.innerHTML = '<option value="">Selecione a Cidade</option>';
 
-    let dataResponse = await fetch(urlCities);
-    let cities = await dataResponse.json();
+    const dataResponse = await fetch(urlCities);
+    const cities = await dataResponse.json();
     cities.forEach(city => {
-      citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>`;
+      citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`;
     });
     citySelect.disabled = false;
   } catch (error) {
