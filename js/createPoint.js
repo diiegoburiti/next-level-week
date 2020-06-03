@@ -24,7 +24,7 @@ async function getCities(event) {
     stateInput.value = event.target.options[indexOfSelectedState].text
     const ufValue = event.target.value;
     const urlCities = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/distritos`;
-    
+
     citySelect.disabled = true;
     citySelect.innerHTML = '<option value="">Selecione a Cidade</option>';
 
@@ -37,4 +37,29 @@ async function getCities(event) {
   } catch (error) {
     console.log(error);
   }
+}
+
+const itemsToColect = document.querySelectorAll('[data-id]');
+//for(item of itemsToColect) {
+//  item.addEventListener('click', handleSelectItem);
+//}
+itemsToColect.forEach(item => item.addEventListener('click', handleSelectItem))
+
+const collecteditems = document.querySelector('[name=items]')
+let selectedItems = [];
+
+function handleSelectItem(event) {
+  const itemId = event.currentTarget.dataset.id;
+  const itemLi = event.target;
+  itemLi.classList.toggle('selected');
+
+  const alreadySelected = selectedItems.findIndex(item => item === itemId);
+
+  if (alreadySelected >= 0) {
+    const filteredItems = selectedItems.filter(item => item != itemId);
+    selectedItems = filteredItems;
+  } else {
+    selectedItems.push(itemId);
+  }
+  collecteditems.value = selectedItems
 }

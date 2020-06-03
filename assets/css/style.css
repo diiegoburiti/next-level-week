@@ -262,7 +262,7 @@ h6 {
 }
 
 #page-create-point form input:focus {
-  border: 1px solid #322153;
+  border: 1px solid #34cb79;
   opacity: 0.5;
 }
 
@@ -296,6 +296,74 @@ h6 {
 
 #page-create-point form button:hover {
   background-color: #322153;
+}
+
+#page-create-point .item-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+}
+
+#page-create-point .item-grid li {
+  list-style: none;
+  background-color: #f5f5f5;
+  border: 2px solid #f5f5f5;
+  border-radius: 8px;
+  height: 180px;
+  padding: 32px 24px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  color: #322153;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 1px rgba(44, 44, 44, 0.13);
+          box-shadow: 1px 1px 1px rgba(44, 44, 44, 0.13);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#page-create-point .item-grid li:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+#page-create-point .item-grid li.selected {
+  background-color: #e1faec;
+  border: 2px solid #34cb79;
+}
+
+#page-create-point .item-grid span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 12px;
+  pointer-events: none;
+}
+
+#page-create-point .item-grid img {
+  pointer-events: none;
 }
 
 @media (max-width: 900px) {
