@@ -19,10 +19,29 @@
       <main class="main">
         <h1>Seu Marketplace de Coleta de Resídos.</h1>
         <p>Ajudamos pessoas a encontrar pontos de coleta de forma eficienete.</p>
-        <a href="#"><span></span> <strong>Pesquisar Pontos de Coleta</strong></a>
+        <a  class="btn-searcher" href="#"><span></span> <strong>Pesquisar Pontos de Coleta</strong></a>
       </main>
     </div>
   </div>
+
+  <div class="modal hide">
+    <div class="content">
+      <div class="header">
+        <h1>Pontos de Coleta</h1>
+        <a class="btn-close" href="#">Fechar</a>
+      </div>
+      <form action="">
+        <label for="search">Cidade</label>
+        <div class="search field">
+          <input type="text" name="search" placeholder="Pesquise por Cidade" required>
+          <button>
+            <img src="assets/icones/search.svg" alt="Buscar">
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+<script src="js/modal.js"></script>
 </body>
 
 </html>
