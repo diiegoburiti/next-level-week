@@ -10,26 +10,6 @@
     z-index: -1;
   }
 }
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 48px 0;
-
-  a {
-    color: $title-color;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-
-    span {
-      background-image: url(/assets/icones/log-in.svg);
-      width: 20px;
-      height: 20px;
-      margin-right: 16px;
-    }
-  }
-}
 
 #page-search-results {
   width: 90vw;

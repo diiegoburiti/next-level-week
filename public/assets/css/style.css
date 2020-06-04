@@ -41,7 +41,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 48px;
+  margin: 48px 0;
 }
 
 header a {
@@ -267,37 +267,6 @@ header a span {
   display: none;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 48px;
-}
-
-header a {
-  color: #322153;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header a span {
-  background-image: url(/assets/icones/log-in.svg);
-  width: 20px;
-  height: 20px;
-  margin-right: 16px;
-}
-
 #page-create-point {
   width: 90vw;
   max-width: 1100px;
@@ -481,37 +450,6 @@ header a span {
   left: 0;
   bottom: 0;
   z-index: -1;
-}
-
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 48px 0;
-}
-
-header a {
-  color: #322153;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header a span {
-  background-image: url(/assets/icones/log-in.svg);
-  width: 20px;
-  height: 20px;
-  margin-right: 16px;
 }
 
 #page-search-results {

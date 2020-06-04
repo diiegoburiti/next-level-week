@@ -1,24 +1,3 @@
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 48px;
-
-  a {
-    color: $title-color;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-
-    span {
-      background-image: url(/assets/icones/log-in.svg);
-      width: 20px;
-      height: 20px;
-      margin-right: 16px;
-    }
-  }
-}
-
 #page-create-point {
   width: 90vw;
   max-width: 1100px;
