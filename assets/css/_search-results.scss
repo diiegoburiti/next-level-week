@@ -1,4 +1,4 @@
-body {
+.background-body {
   &::after {
     content: "";
     position: fixed;
@@ -10,32 +10,31 @@ body {
     z-index: -1;
   }
 }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 48px 0;
+
+  a {
+    color: $title-color;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    span {
+      background-image: url(/assets/icones/arrow-left.svg);
+      width: 20px;
+      height: 20px;
+      margin-right: 16px;
+    }
+  }
+}
 
 #page-search-results {
   width: 90vw;
   max-width: 1100px;
   margin: 0 auto;
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 48px 0;
-
-    a {
-      color: $title-color;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-
-      span {
-        background-image: url(/assets/icones/arrow-left.svg);
-        width: 20px;
-        height: 20px;
-        margin-right: 16px;
-      }
-    }
-  }
 
   .main {
     h4 {
@@ -50,33 +49,36 @@ body {
       grid-gap: 24px;
     }
 
-    img {
-      width: 100%;
-      height: 250px;
-      border-radius: 8px 8px 0 0;
-    }
+    .card {
+      img {
+        width: 100%;
+        height: 250px;
+        border-radius: 8px;
+        box-shadow: 1px 1px 5px 0px rgba(44, 44, 44, 0.2);
+      }
 
-    h1 {
-      font-size: 36px;
-      line-height: 40px;
-      color: #312153;
-      margin-top: 32px;
-    }
+      h1 {
+        font-size: 36px;
+        line-height: 40px;
+        color: #312153;
+        margin-top: 32px;
+      }
 
-    h3 {
-      font-family: $roboto-font;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 24px;
-      color: $primary-color;
-      margin: 24px 0;
-    }
+      h3 {
+        font-family: $roboto-font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 24px;
+        color: $primary-color;
+        margin: 24px 0;
+      }
 
-    p {
-      font-size: 16px;
-      line-height: 26px;
-      color: $title-color;
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        color: $title-color;
+      }
     }
   }
 }
