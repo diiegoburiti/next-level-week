@@ -1,48 +1,30 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends 'layout.html' %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/public/assets/css/style.css">
+{% set pageId = 'page-home' %}
 
-  <title>Ecoleta</title>
-</head>
+{% block content %}
+  <div class="container">
+    <header class="">
+      <a href="/"><img src="/assets/icones/logo.svg" alt="Logo Ecoleta" title="Ecoleta"></a>
+      <a href="/createpoint">
+        <span></span>
+        Cadastre Um Ponto de Coleta.</a>
+    </header>
+    <main class="main">
+      <h1>Seu Marketplace de Coleta de Resídos.</h1>
+      <p>Ajudamos pessoas a encontrar pontos de coleta de forma eficienete.</p>
+      <a class="btn-searcher" href="#">
+        <span></span>
+        <strong>Pesquisar Pontos de Coleta</strong>
+      </a>
+    </main>
+  </div >
+{% endblock content %}
 
-<body>
-  <div id="page-home">
-    <div class="container">
-      <header class="">
-        <a href="index.html"><img src="/public/assets/icones/logo.svg" alt="Logo Ecoleta" title="Ecoleta"></a>
-        <a href="createPoint.html"><span></span> Cadastre Um Ponto de Coleta.</a>
-      </header>
-      <main class="main">
-        <h1>Seu Marketplace de Coleta de Resídos.</h1>
-        <p>Ajudamos pessoas a encontrar pontos de coleta de forma eficienete.</p>
-        <a  class="btn-searcher" href="#"><span></span> <strong>Pesquisar Pontos de Coleta</strong></a>
-      </main>
-    </div>
-  </div>
+{% block modal %}
+  {%include 'partials/modal.html'%}
+{% endblock modal %}
 
-  <div class="modal hide">
-    <div class="content">
-      <div class="header">
-        <h1>Pontos de Coleta</h1>
-        <a class="btn-close" href="#">Fechar</a>
-      </div>
-      <form action="">
-        <label for="search">Cidade</label>
-        <div class="search field">
-          <input type="text" name="search" placeholder="Pesquise por Cidade" required>
-          <button>
-            <img src="/public/assets/icones/search.svg" alt="Buscar">
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-<script src="/public/assets/js/modal.js"></script>
-</body>
-
-</html>
+{% block scripts %}
+  <script src="/assets/js/modal.js"></script>
+{% endblock scripts %}
