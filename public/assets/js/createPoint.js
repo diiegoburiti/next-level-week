@@ -40,14 +40,14 @@ async function getCities(event) {
 
 const itemsToColect = document.querySelectorAll('[data-id]');
 //for(item of itemsToColect) {
-//  item.addEventListener('click', handleSelectItem);
+//  item.addEventListener('click', handleSelectedItem);
 //}
-itemsToColect.forEach(item => item.addEventListener('click', handleSelectItem))
+itemsToColect.forEach(item => item.addEventListener('click', handleSelectedItem))
 
 const collecteditems = document.querySelector('[name=items]')
 let selectedItems = [];
 
-function handleSelectItem(event) {
+function handleSelectedItem(event) {
   const itemId = event.currentTarget.dataset.id;
   const itemLi = event.target;
   itemLi.classList.toggle('selected');
@@ -60,5 +60,6 @@ function handleSelectItem(event) {
   } else {
     selectedItems.push(itemId);
   }
+ 
   collecteditems.value = selectedItems
 }

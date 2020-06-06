@@ -8,71 +8,87 @@
   position: fixed;
   top: 0;
   transition: 400ms;
+}
+.content {
+  width: 400px;
+  color: #fff;
+}
 
-  .content {
-    width: 400px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+
+  a {
+    background-image: url(../icones/x.svg);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    font-size: 0.01px;
+  }
+
+  h1 {
     color: #fff;
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+label {
+  font-size: 18px;
+  line-height: 16px;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.field {
+  display: flex;
+
+  input {
+    flex: 1;
+    background-color: $white-color;
+    padding: 10px 24px;
+    border-radius: 8px 0 0 8px;
+    border: none;
+    font-size: 16px;
+    color: $title-color;
   }
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 48px;
+  button {
+    width: 52px;
+    height: 52px;
+    background-color: $primary-color;
+    border-radius: 0 8px 8px 0;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
 
-    a {
-      background-image: url(../icones/x.svg);
-      width: 20px;
-      height: 20px;
-      display: flex;
-      font-size: 0.01px;
+    &:hover {
+      background-color: $title-color;
     }
-
-    h1 {
-      color: #fff;
-      font-size: 36px;
-      line-height: 40px;
-    }
-  }
-
-  label {
-    font-size: 14px;
-    line-height: 16px;
-    display: block;
-    margin-bottom: 8px;
-  }
-
-  .field {
-    display: flex;
-
-    input {
-      flex: 1;
-      background-color: $white-color;
-      padding: 10px 24px;
-      border-radius: 8px 0 0 8px;
-      border: none;
-      font-size: 16px;
-      color: $title-color;
-    }
-
-    button {
-      width: 52px;
-      height: 52px;
-      background-color: $primary-color;
-      border-radius: 0 8px 8px 0;
-      border: none;
-      cursor: pointer;
-      transition: 0.4s;
-
-      &:hover {
-        background-color: $title-color;
-      }
-      img {
-        margin: 0 auto;
-      }
+    img {
+      margin: 0 auto;
     }
   }
 }
+
 .modal.hide {
   display: none;
+}
+
+
+.point {
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      color: #fff;
+      text-align: center;
+      margin-top: 32px ;
+    }  
+  }
 }

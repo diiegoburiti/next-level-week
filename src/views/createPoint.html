@@ -9,41 +9,47 @@
 {% block content %}
   {%include 'partials/page-header.html'%}
 
-  <form action="/resultpoints">
+  <form action="/savepoint" method="POST">
     <h1>Cadastro de Ponto de Coleta.</h1>
 
     <fieldset>
       <legend>
         <h2>Dados de Entidade.</h2>
       </legend>
-      <div class="field">
-        <label for="name">Nome da Entidade</label>
-        <input type="text" name="name" required="required">
-      </div>
       <div class="field-group">
-
         <div class="field">
-          <label for="address">Endereço</label>
-          <input type="text" name="adresss" required="required">
+          <label for="name">Nome da Entidade</label>
+          <input type="text" name="name" required="required" placeholder="Guamá Coleta">
         </div>
 
         <div class="field">
-          <label for="adresss2">Número/Complemento</label>
-          <input type="text" name="adresss2" required="required">
+          <label for="name">Imagem da Imagem</label>
+          <input type="url" name="image" placeholder="http://" required="required">
+        </div>
+      </div>
+      <div class="field-group">
+        <div class="field">
+          <label for="address">Endereço</label>
+          <input type="text" name="address" required="required" placeholder="Guamá, R.Barão de Igarapé Miri">
+        </div>
+
+        <div class="field">
+          <label for="address2">Número/Complemento</label>
+          <input type="text" name="address2" required="required" placeholder="Número: 999">
         </div>
       </div>
       <div class="field-group">
         <div class="field">
           <label for="state">Estado</label>
-          <select name="uf" id="">
+          <select name="uf" required="required">
             <option value="">Selecione o Estado</option>
           </select>
-          <input type="hidden" name="state" required="required">
+          <input type="hidden" name="state">
         </div>
 
         <div class="field">
           <label for="city">Cidade</label>
-          <select name="city" disabled="disabled" id="">
+          <select name="city" disabled="disabled" required="required">
             <option value="">Selecione a Cidade</option>
           </select>
         </div>
@@ -55,27 +61,27 @@
         <h2>Itens de Coleta</h2>
       </legend>
       <div class="item-grid">
-        <li data-id="1">
+        <li data-id="Lampadas">
           <img src="/assets/icones/lampadas.svg" alt="Lampadas">
           <span>Lampadas</span>
         </li>
-        <li data-id="2">
+        <li data-id="Pilhas e Baterias">
           <img src="/assets/icones/baterias.svg" alt="Pilhas">
-          <span>Pilhas</span>
+          <span>Pilhas e Baterias</span>
         </li>
-        <li data-id="3">
+        <li data-id="Papel e Papelão">
           <img src="/assets/icones/papeis-papelao.svg" alt="Papel e Papelão">
           <span>Papel e Papelão</span>
         </li>
-        <li data-id="4">
+        <li data-id="Resídos Eletronicos">
           <img src="/assets/icones/eletronicos.svg" alt="Resídos Eletronicos">
           <span>Resídos Eletronicos</span>
         </li>
-        <li data-id="5">
+        <li data-id="Organicos">
           <img src="/assets/icones/organicos.svg" alt="Organicos">
           <span>Organicos</span>
         </li>
-        <li data-id="6">
+        <li data-id="Óleo de Cozinha">
           <img src="/assets/icones/oleo.svg" alt="Óleo de Cozinha">
           <span>Óleo de Cozinha</span>
         </li>
@@ -84,7 +90,14 @@
     </fieldset>
     <button type="submit">Cadastrar Ponto de Coleta</button>
   </form>
+
 {% endblock content %}
+
+{% block modal %}
+  {% if saved %}
+    {%include 'partials/point-created.html'%}
+  {% endif %}
+{% endblock modal %}
 
 {% block scripts %}
   <script src="/assets/js/createPoint.js"></script>
