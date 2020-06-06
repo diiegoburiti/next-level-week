@@ -1,6 +1,6 @@
 # Next Week Level - Ecoleta
 
-## About the project [Ecoleta](public/assets/icones/logo.svg)
+## About the ![Ecoleta](public/assets/icones/logo.svg)  project.
 
 -Ecoleta is a project for registering and locating recyclable garbage collection points, this project was developed by [Rocketseat](https://rocketseat.com.br/) for the week, Next Level Week.
 
