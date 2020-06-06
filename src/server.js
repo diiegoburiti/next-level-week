@@ -22,7 +22,7 @@ server.get('/', (req, res) => {
 });
 
 server.get('/createpoint', (req, res) => {
-  return res.render('createPoint.html');
+  return res.render('createPoint.html', {saved: false});
 });
 
 server.post('/savepoint', (req, res) => {
@@ -49,10 +49,9 @@ server.post('/savepoint', (req, res) => {
 
   function afterInsertData(err) {
     if (err) {
-      return console.log(err);
-      //return res.send('Error no Cadastro');
+      console.log(err);
+    return res.render('createPoint.html', {error: true})    
     }
-
     console.log(this);
     return res.render('createPoint.html', { saved: true })
   }

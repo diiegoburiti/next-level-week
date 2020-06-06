@@ -41,7 +41,7 @@
       <div class="field-group">
         <div class="field">
           <label for="state">Estado</label>
-          <select name="uf" required>
+          <select name="uf" required="required">
             <option value="">Selecione o Estado</option>
           </select>
           <input type="hidden" name="state">
@@ -49,7 +49,7 @@
 
         <div class="field">
           <label for="city">Cidade</label>
-          <select name="city" disabled="disabled" required>
+          <select name="city" disabled="disabled" required="required">
             <option value="">Selecione a Cidade</option>
           </select>
         </div>
@@ -91,12 +91,14 @@
     </fieldset>
     <button type="submit">Cadastrar Ponto de Coleta</button>
   </form>
-
 {% endblock content %}
 
 {% block modal %}
-  {% if saved %}
-    {%include 'partials/point-created.html'%}
+    {%if saved%}
+    {%include "partials/point-created.html"%}
+    {%endif%}
+    :{% if error %}
+    {% include "partials/point-created-error.html" %}
   {% endif %}
 {% endblock modal %}
 

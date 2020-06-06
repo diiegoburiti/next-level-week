@@ -8,6 +8,7 @@
   position: fixed;
   top: 0;
   transition: 400ms;
+  animation: show-right .5s forwards; 
   
   .content {
     width: 400px;
@@ -73,6 +74,17 @@
         }
       }
     }
+  }
+}
+
+@keyframes show-right {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
