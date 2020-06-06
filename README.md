@@ -1,8 +1,14 @@
-# Next Week Level
-## This is from [Rocketseat](https://rocketseat.com.br/) project, to practice code, challenges and networks.
+# Next Week Level - Ecoleta
 
-### To run the project locally, you need to have nodejs and npm installed on your computer. 
+## About the project ![Ecoleta](public/assets/logo.svg)
 
-### So run `npm i`, to download the project's dependencies.
+## Ecoleta is a project for registering and locating recyclable garbage collection points, this project was developed by [Rocketseat](https://rocketseat.com.br/) for the week, Next Level Week.
 
-#### Then the app server will be running on port 3000.
+### Usage
+- To usage the project. Clone the repository and install the dependencies using the command: `npm install`.
+
+- After that,be sure that all dependencies have been installed correctly.
+
+- Then run the command `npm start`.
+
+- Then the project will be running on port `3000` on your machine, you can access it by accessing the address `localhost:3000`.
