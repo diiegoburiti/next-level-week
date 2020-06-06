@@ -2,7 +2,7 @@
 
 ## About the project [Ecoleta](public/assets/icones/logo.svg)
 
-## Ecoleta is a project for registering and locating recyclable garbage collection points, this project was developed by [Rocketseat](https://rocketseat.com.br/) for the week, Next Level Week.
+-Ecoleta is a project for registering and locating recyclable garbage collection points, this project was developed by [Rocketseat](https://rocketseat.com.br/) for the week, Next Level Week.
 
 ### Usage
 - To usage the project. Clone the repository and install the dependencies using the command: `npm install`.
