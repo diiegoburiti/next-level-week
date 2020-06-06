@@ -5,7 +5,6 @@
 {% block title %}
   <title>Resultado da Pesquisa</title>
 {% endblock title %}
-
 {% block content %}
   {%include 'partials/page-header.html'%}
 
@@ -21,14 +20,17 @@
 
           <div class="card">
             <img src="{{place.image}}}" alt="{{place.name}}">
-            <h1>{{place.name}}</h1>
-            <h3>{{place.items}}</h3>
-            <p>{{place.state}},
-              {{place.city}}
-              <br>
-              {{place.address}}
-              <br>
-              Número: {{place.address2}}</p>
+            <div class="card-content">
+              <h1>{{place.name}}</h1>
+              <h3>{{place.items}}</h3>
+              <p>{{place.state}},
+                {{place.city}}
+                <br>
+                {{place.address}}
+                <br>
+                Número:
+                {{place.address2}}</p>
+            </div>
           </div>
         {% endfor %}
       </div>

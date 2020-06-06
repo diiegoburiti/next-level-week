@@ -19,23 +19,23 @@
       <div class="field-group">
         <div class="field">
           <label for="name">Nome da Entidade</label>
-          <input type="text" name="name" required="required" placeholder="Guamá Coleta">
+          <input type="text" name="name" required="required" placeholder="Qual nome da entidade?">
         </div>
 
         <div class="field">
-          <label for="name">Imagem da Imagem</label>
+          <label for="name">Url da Imagem</label>
           <input type="url" name="image" placeholder="http://" required="required">
         </div>
       </div>
       <div class="field-group">
         <div class="field">
           <label for="address">Endereço</label>
-          <input type="text" name="address" required="required" placeholder="Guamá, R.Barão de Igarapé Miri">
+          <input type="text" name="address" required="required" placeholder="Qual é o endereço?">
         </div>
 
         <div class="field">
           <label for="address2">Número/Complemento</label>
-          <input type="text" name="address2" required="required" placeholder="Número: 999">
+          <input type="text" name="address2" required="required" placeholder="Qual é o número?">
         </div>
       </div>
       <div class="field-group">
@@ -59,6 +59,7 @@
     <fieldset>
       <legend>
         <h2>Itens de Coleta</h2>
+        <p>Selecione um ou mais itens para coleta</p>
       </legend>
       <div class="item-grid">
         <li data-id="Lampadas">
@@ -90,12 +91,14 @@
     </fieldset>
     <button type="submit">Cadastrar Ponto de Coleta</button>
   </form>
-
 {% endblock content %}
 
 {% block modal %}
-  {% if saved %}
-    {%include 'partials/point-created.html'%}
+    {%if saved%}
+    {%include "partials/point-created.html"%}
+    {%endif%}
+    :{% if error %}
+    {% include "partials/point-created-error.html" %}
   {% endif %}
 {% endblock modal %}
 

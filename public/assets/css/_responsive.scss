@@ -211,6 +211,11 @@
       }
     }
   }
+  .modal {
+    .content {
+      width: 320px;
+    }
+  }
 }
 
 @media (max-height: 760px) {
