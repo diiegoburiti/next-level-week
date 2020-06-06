@@ -52,6 +52,7 @@ server.post('/savepoint', (req, res) => {
       return console.log(err);
       //return res.send('Error no Cadastro');
     }
+
     console.log(this);
     return res.render('createPoint.html', { saved: true })
   }
@@ -59,24 +60,17 @@ server.post('/savepoint', (req, res) => {
   db.run(query, values, afterInsertData);
 });
 
-
 server.get('/resultpoints', (req, res) => {
   const search = req.query.search
-  if (search == '') {
-    return res.render('searchResults.html', { total: 0 });
-  }
+  if (search == '') return res.render('searchResults.html', { total: 0 });
+  
   // take  database data
   db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function (err, rows) {
-    if (err) {
-      console.log(err);
-    }
-    const total = rows.length;
-
-    console.log(total);
+    if (err) console.log(err);
     
+    const total = rows.length;
     return res.render('searchResults.html', { places: rows, total: total });
   });
-
 });
 
-server.listen(port)
+server.listen(port, () => console.log(`Server running on port ${port}`));

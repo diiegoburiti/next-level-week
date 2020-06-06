@@ -22,10 +22,17 @@
 
     legend {
       margin-bottom: 40px;
-    }
-
-    h2 {
-      font-size: 24px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      h2 {
+        font-size: 24px;
+      }
+      p {
+        margin-top: 14px;
+        color: $title-color;
+      }
     }
 
     .field {
@@ -54,7 +61,6 @@
     input {
       &:focus {
         border: 1px solid #34cb79;
-        opacity: 0.5;
       }
     }
     select {
@@ -69,6 +75,8 @@
     }
 
     button {
+      display: block;
+      margin: 0 auto;
       width: 260px;
       height: 56px;
       background-color: $primary-color;
@@ -117,7 +125,7 @@
     li.selected {
       background-color: #e1faec;
       border: 2px solid #34cb79;
-      transform: translateY(-6px);
+      transform: translateY(-8px);
     }
 
     span {
