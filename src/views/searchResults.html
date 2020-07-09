@@ -35,13 +35,10 @@
         {% endfor %}
       </div>
     </main>
-
   {% else %}
 
-    <h4>
-      <strong>Nenhum
-      </strong>Local Cadastrado.</h4>
-
+    {%include "partials/location-notfound.html"%}
+    
   {% endif %}
 
 {% endblock content %}

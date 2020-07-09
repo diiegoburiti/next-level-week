@@ -4,11 +4,14 @@ const ufSelect = document.querySelector('select[name=uf]');
 ufSelect.addEventListener('change', getCities);
 
 async function populateUfs() {
-
-  const dataResponse = await fetch(urlStates)
-  const states = await dataResponse.json()
-  for (state of states) {
-    ufSelect.innerHTML += `<option value="${state.id}">${state.nome}</option>`;
+  try {
+    const dataResponse = await fetch(urlStates)
+    const states = await dataResponse.json()
+    for (state of states) {
+      ufSelect.innerHTML += `<option value="${state.id}">${state.nome}</option>`;
+    }
+  } catch (error) {
+    console.log(error);
   }
 }
 
@@ -60,6 +63,6 @@ function handleSelectedItem(event) {
   } else {
     selectedItems.push(itemId);
   }
- 
+
   collecteditems.value = selectedItems
 }

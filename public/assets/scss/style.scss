@@ -36,7 +36,8 @@ h6 {
   color: $title-color;
 }
 @import "home";
-@import "modal";
 @import "create-point";
 @import "search-results";
+@import "modal";
+@import "notfound";
 @import "responsive";

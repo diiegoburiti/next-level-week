@@ -1,0 +1,12 @@
+.notfound {
+  display: block;
+  margin: 0 auto;
+  max-width: 600px;
+
+  &_text {
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 2rem;
+    color: $title-color !important;
+  }
+}
