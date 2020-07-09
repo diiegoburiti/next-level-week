@@ -22,5 +22,6 @@
     "nodemon": "^2.0.4",
     "nunjucks": "^3.2.1",
     "sqlite3": "^4.2.0"
-  }
+  },
+  "devDependencies": {}
 }

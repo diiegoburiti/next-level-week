@@ -1,4 +1,4 @@
-const urlStates = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/'
+const urlStates = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/';
 const ufSelect = document.querySelector('select[name=uf]');
 
 ufSelect.addEventListener('change', getCities);

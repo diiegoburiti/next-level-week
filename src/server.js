@@ -1,15 +1,17 @@
 const express = require('express');
+
 const server = express();
 // public config
-server.use(express.static('public'))
+server.use(express.static('public'));
 //  req.body express config
 server.use(express.urlencoded({ extended: true }));
 
-// database
-const db = require('./database/db')
+// template engine
+const nunjucks = require('nunjucks');
 
-// template engine 
-const nunjucks = require('nunjucks')
+// database
+const db = require('./database/db');
+
 // template config
 nunjucks.configure('src/views', {
   express: server,
@@ -22,7 +24,7 @@ server.get('/', (req, res) => {
 });
 
 server.get('/createpoint', (req, res) => {
-  return res.render('createPoint.html', {saved: false});
+  return res.render('createPoint.html', { saved: false });
 });
 
 server.post('/savepoint', (req, res) => {
@@ -35,7 +37,7 @@ server.post('/savepoint', (req, res) => {
     state,
     city,
     items
-  ) VALUES (?,?,?,?,?,?,?);`
+  ) VALUES (?,?,?,?,?,?,?);`;
 
   const values = [
     req.body.image,
@@ -44,31 +46,33 @@ server.post('/savepoint', (req, res) => {
     req.body.address2,
     req.body.state,
     req.body.city,
-    req.body.items
-  ]
+    req.body.items,
+  ];
 
   function afterInsertData(err) {
     if (err) {
       console.log(err);
-    return res.render('createPoint.html', {error: true})    
+      return res.render('createPoint.html', { error: true });
     }
     console.log(this);
-    return res.render('createPoint.html', { saved: true })
+    return res.render('createPoint.html', { saved: true });
   }
 
   db.run(query, values, afterInsertData);
 });
 
 server.get('/resultpoints', (req, res) => {
-  const search = req.query.search
-  if (search == '') return res.render('searchResults.html', { total: 0 });
-  
+  const search = req.query.search;
+  if (search === '') {
+    return res.render('searchResults.html', { total: 0 });
+  }
   // take  database data
-  db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function (err, rows) {
-    if (err) console.log(err);
-    
+  db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, (err, rows) => {
+    if (err) {
+      console.log(err);
+    }
     const total = rows.length;
-    return res.render('searchResults.html', { places: rows, total: total });
+    return res.render('searchResults.html', { places: rows, total });
   });
 });
 
